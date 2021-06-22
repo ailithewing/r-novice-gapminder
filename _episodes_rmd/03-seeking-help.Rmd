@@ -56,7 +56,7 @@ Different functions might have different sections, but these are the main ones y
 > One of the most daunting aspects of R is the large number of functions
 > available. It would be prohibitive, if not impossible to remember the
 > correct usage for every function you use. Luckily, the help files
-> mean you don't have to!
+> mean you do not have to!
 {: .callout}
 
 ## Special Operators
@@ -75,7 +75,7 @@ Without any arguments, `vignette()` will list all vignettes for all installed pa
 `vignette(package="package-name")` will list all available vignettes for
 `package-name`, and `vignette("vignette-name")` will open the specified vignette.
 
-If a package doesn't have any vignettes, you can usually find help by typing
+If a package does not have any vignettes, you can usually find help by typing
 `help("package-name")`.
 
 RStudio also has a set of excellent
@@ -84,7 +84,7 @@ RStudio also has a set of excellent
 
 ## When you kind of remember the function
 
-If you're not sure what package a function is in, or how it's specifically spelled you can do a fuzzy search:
+If you are not sure what package a function is in, or how it is specifically spelled you can do a fuzzy search:
 
 ```{r, eval=FALSE}
 ??function_name
@@ -99,27 +99,27 @@ to set your working directory includes "set" in its name. You can do a fuzzy sea
 
 ## When you have no idea where to begin
 
-If you don't know what function or package you need to use
+If you do not know what function or package you need to use
 [CRAN Task Views](http://cran.at.r-project.org/web/views)
 is a specially maintained list of packages grouped into
 fields. This can be a good starting point.
 
-## When your code doesn't work: seeking help from your peers
+## When your code does not work: seeking help from your peers
 
-If you're having trouble using a function, 9 times out of 10,
+If you are having trouble using a function, 9 times out of 10,
 the answers you are seeking have already been answered on
 [Stack Overflow](http://stackoverflow.com/). You can search using
 the `[r]` tag. Please make sure to see their page on 
 [how to ask a good question.](https://stackoverflow.com/help/how-to-ask)
 
-If you can't find the answer, there are a few useful functions to
+If you can not find the answer, there are a few useful functions to
 help you ask a question from your peers:
 
 ```{r, eval=FALSE}
 ?dput
 ```
 
-Will dump the data you're working with into a format so that it can
+Will dump the data you are working with into a format so that it can
 be copy and pasted by anyone else into their R session.
 
 ```{r}
@@ -150,7 +150,7 @@ your issue.
 
 > ## Challenge 2
 >
-> Look at the help for the `paste` function. You'll need to use this later.
+> Look at the help for the `paste` function. You will need to use this later.
 > What is the difference between the `sep` and `collapse` arguments?
 >
 > > ## Solution to Challenge 2

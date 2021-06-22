@@ -33,7 +33,7 @@ gapminder data is updated periodically, and we may want to pull in that new
 information later and re-run our analysis again. We may also obtain similar data
 from a different source in the future.
 
-In this lesson, we'll learn how to write a function so that we can repeat
+In this lesson, we will learn how to write a function so that we can repeat
 several operations with a single command.
 
 > ## What is a function?
@@ -169,7 +169,7 @@ kelvin_to_celsius <- function(temp) {
 
 ## Interlude: Defensive Programming
 
-Now that we've begun to appreciate how writing functions provides an efficient
+Now that we have begun to appreciate how writing functions provides an efficient
 way to make R code re-usable and modular, we should note that it is important
 to ensure that functions only work in their intended use-cases. Checking
 function parameters is related to the concept of _defensive programming_.
@@ -271,7 +271,7 @@ fahr_to_kelvin(temp = as.factor(32))
 
 ## More on combining functions
 
-Now, we're going to define a function that calculates the Gross Domestic Product
+Now, we are going to define a function that calculates the Gross Domestic Product
 of a nation from the data available in our dataset:
 
 ```{r}
@@ -288,7 +288,7 @@ argument names are contained within parentheses. Next, the body of the function
 -- the statements executed when you call the function -- is contained within
 curly braces (`{}`).
 
-We've indented the statements in the body by two spaces. This makes the code
+We have indented the statements in the body by two spaces. This makes the code
 easier to read but does not affect how it operates.
 
 When we call the function, the values we pass to it are assigned to the
@@ -303,7 +303,7 @@ whatever command is executed on the last line of the function.
 calcGDP(head(gapminder))
 ```
 
-That's not very informative. Let's add some more arguments so we can extract
+That is not very informative. Let's add some more arguments so we can extract
 that per year and country.
 
 ```{r}
@@ -323,7 +323,7 @@ calcGDP <- function(dat, year=NULL, country=NULL) {
 }
 ```
 
-If you've been writing these functions down into a separate R script
+If you have been writing these functions down into a separate R script
 (a good idea!), you can load in the functions into our R session by using the
 `source()` function:
 
@@ -331,9 +331,9 @@ If you've been writing these functions down into a separate R script
 source("functions/functions-lesson.R")
 ```
 
-Ok, so there's a lot going on in this function now. In plain English, the
-function now subsets the provided data by year if the year argument isn't empty,
-then subsets the result by country if the country argument isn't empty. Then it
+Ok, so there is a lot going on in this function now. In plain English, the
+function now subsets the provided data by year if the year argument is not empty,
+then subsets the result by country if the country argument is not empty. Then it
 calculates the GDP for whatever subset emerges from the previous two steps. The
 function then adds the GDP as a new column to the subsetted data and returns
 this as the final result. You can see that the output is much more informative
@@ -363,7 +363,7 @@ Let's walk through the body of the function:
 calcGDP <- function(dat, year=NULL, country=NULL) {
 ```
 
-Here we've added two arguments, `year`, and `country`. We've set
+Here we have added two arguments, `year`, and `country`. We have set
 *default arguments* for both as `NULL` using the `=` operator
 in the function definition. This means that those arguments will
 take on those values unless the user specifies otherwise.
@@ -378,7 +378,7 @@ take on those values unless the user specifies otherwise.
 ```
 
 Here, we check whether each additional argument is set to `null`, and whenever
-they're not `null` overwrite the dataset stored in `dat` with a subset given by
+they are not `null` overwrite the dataset stored in `dat` with a subset given by
 the non-`null` argument.
 
 Building these conditionals into the function makes it more flexible for later.
@@ -498,7 +498,7 @@ attempt where we got a vector of numbers.
 
 > ## Tip: Testing and documenting
 >
-> It's important to both test functions and document them:
+> It is important to both test functions and document them:
 > Documentation helps you, and others, understand what the
 > purpose of your function is, and how to use it, and its
 > important to make sure that your function actually does

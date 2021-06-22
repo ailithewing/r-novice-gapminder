@@ -34,7 +34,7 @@ knitr_fig_path("01-")
 
 ## Motivation
 
-Science is a multi-step process: once you've designed an experiment and collected
+Science is a multi-step process: once you have designed an experiment and collected
 data, the real fun begins! This lesson will teach you how to start this process using
 R and RStudio. We will begin with raw data, perform exploratory analyses, and learn
 how to plot results graphically. This example starts with a dataset from
@@ -55,11 +55,11 @@ Please ensure you have the latest version of R and RStudio installed on your mac
 
 Welcome to the R portion of the Software Carpentry workshop.
 
-Throughout this lesson, we're going to teach you some of the fundamentals of
+Throughout this lesson, we are going to teach you some of the fundamentals of
 the R language as well as some best practices for organizing code for
 scientific projects that will make your life easier.
 
-We'll be using RStudio: a free, open source R Integrated Development
+We will be using RStudio: a free, open source R Integrated Development
 Environment (IDE). It provides a built-in editor, works on all platforms (including
 on servers) and provides many advantages such as integration with version
 control and project management.
@@ -135,8 +135,8 @@ The simplest thing you could do with R is to do arithmetic:
 1 + 100
 ```
 
-And R will print out the answer, with a preceding "[1]". Don't worry about this
-for now, we'll explain that later. For now think of it as indicating output.
+And R will print out the answer, with a preceding "[1]". Do not worry about this
+for now, we will explain that later. For now think of it as indicating output.
 
 Like bash, if you type in an incomplete command, R will wait for you to
 complete it:
@@ -152,18 +152,18 @@ complete it:
 {: .output}
 
 Any time you hit return and the R session shows a "+" instead of a ">", it
-means it's waiting for you to complete the command. If you want to cancel
+means it is waiting for you to complete the command. If you want to cancel
 a command you can hit <kbd>Esc</kbd> and RStudio will give you back the ">" prompt.
 
 > ## Tip: Canceling commands
 >
-> If you're using R from the command line instead of from within RStudio,
+> If you are using R from the command line instead of from within RStudio,
 > you need to use <kbd>Ctrl</kbd>+<kbd>C</kbd> instead of <kbd>Esc</kbd>
 > to cancel the command. This applies to Mac users as well!
 >
-> Canceling a command isn't only useful for killing incomplete commands:
-> you can also use it to tell R to stop running code (for example if it's
-> taking much longer than you expect), or to get rid of the code you're
+> Canceling a command is not only useful for killing incomplete commands:
+> you can also use it to tell R to stop running code (for example if it is
+> taking much longer than you expect), or to get rid of the code you are
 > currently writing.
 >
 {: .callout}
@@ -244,7 +244,7 @@ log10(10) # base-10 logarithm
 exp(0.5) # e^(1/2)
 ```
 
-Don't worry about trying to remember every function in R. You
+Do not worry about trying to remember every function in R. You
 can look them up on Google, or if you can remember the
 start of the function's name, use the tab completion in RStudio.
 
@@ -259,7 +259,7 @@ if using R in the terminal, the help page will open in your browser.
 The help page will include a detailed description of the command and 
 how it works. Scrolling to the bottom of the help page will usually 
 show a collection of code examples which illustrate command usage. 
-We'll go through an example later.
+We will go through an example later.
 
 ## Comparing things
 
@@ -449,7 +449,7 @@ ls()
 >
 {: .callout}
 
-Note here that we didn't give any arguments to `ls`, but we still
+Note here that we did not give any arguments to `ls`, but we still
 needed to give the parentheses to tell R to call the function.
 
 If we type `ls` by itself, R prints a bunch of code instead of a listing of objects.
@@ -458,7 +458,7 @@ If we type `ls` by itself, R prints a bunch of code instead of a listing of obje
 ls
 ```
 
-What's going on here? 
+What is going on here? 
 
 Like everything in R, `ls` is the name of an object, and entering the name of
 an object by itself prints the contents of the object. The object `x` that we
@@ -468,7 +468,7 @@ created earlier contains `r x`:
 x
 ```
 
-The object `ls` contains the R code that makes the `ls` function work! We'll talk
+The object `ls` contains the R code that makes the `ls` function work! We will talk
 more about how functions work and start writing our own later.
 
 You can use `rm` to delete objects you no longer need:
@@ -484,10 +484,10 @@ you can pass the results of `ls` to the `rm` function:
 rm(list = ls())
 ```
 
-In this case we've combined the two. Like the order of operations, anything
+In this case we have combined the two. Like the order of operations, anything
 inside the innermost parentheses is evaluated first, and so on.
 
-In this case we've specified that the results of `ls` should be used for the
+In this case we have specified that the results of `ls` should be used for the
 `list` argument in `rm`. When assigning values to arguments by name, you *must*
 use the `=` operator!!
 
@@ -502,7 +502,7 @@ rm(list <- ls())
 > Pay attention when R does something unexpected! Errors, like above,
 > are thrown when R cannot proceed with a calculation. Warnings on the
 > other hand usually mean that the function has run, but it probably
-> hasn't worked as expected.
+> has not worked as expected.
 >
 > In both cases, the message that R prints out usually give you clues
 > how to fix a problem.
@@ -530,7 +530,7 @@ Packages can be installed and updated from the Package tab with the Install and 
 
 > ## Challenge 2
 >
-> What will be the value of each variable  after each
+> What will be the value of each variable after each
 > statement in the following program?
 >
 > ```{r, eval=FALSE}

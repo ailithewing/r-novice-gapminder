@@ -40,7 +40,7 @@ calcGDP <- function(dat, year=NULL, country=NULL) {
 }
 ```
 
-A common task you'll encounter when working with data, is that you'll want to
+A common task you will encounter when working with data, is that you will want to
 run calculations on different groups within the data. In the above, we were
 calculating the GDP by multiplying two columns together. But what if we wanted
 to calculated the mean GDP per continent?
@@ -54,7 +54,7 @@ mean(withGDP[withGDP$continent == "Americas", "gdp"])
 mean(withGDP[withGDP$continent == "Asia", "gdp"])
 ```
 
-But this isn't very *nice*. Yes, by using a function, you have reduced a
+But this is not very *nice*. Yes, by using a function, you have reduced a
 substantial amount of repetition. That **is** nice. But there is still
 repetition. Repeating yourself will cost you time, both now and later, and
 potentially introduce some nasty bugs.
@@ -62,7 +62,7 @@ potentially introduce some nasty bugs.
 We could write a new function that is flexible like `calcGDP`, but this
 also takes a substantial amount of effort and testing to get right.
 
-The abstract problem we're encountering here is know as "split-apply-combine":
+The abstract problem we are encountering here is know as "split-apply-combine":
 
 ![Split apply combine](../fig/12-plyr-fig1.png)
 
@@ -73,7 +73,7 @@ together afterwards.
 ## The `plyr` package
 
 For those of you who have used R before, you might be familiar with the
-`apply` family of functions. While R's built in functions do work, we're
+`apply` family of functions. While R's built in functions do work, we are
 going to introduce you to another method for solving the "split-apply-combine"
 problem. The [plyr](http://had.co.nz/plyr/) package provides a set of
 functions that we find more user friendly for solving this problem.
@@ -99,7 +99,7 @@ function is named "ply".
 
 This gives us 9 core functions **ply.  There are an additional three functions
 which will only perform the split and apply steps, and not any combine step.
-They're named by their input data type and represent null output by a `_` (see
+They are named by their input data type and represent null output by a `_` (see
 table)
 
 Note here that plyr's use of "array" is different to R's,
@@ -143,7 +143,7 @@ returns another `data.frame` (2nd letter is a **d**)
 - The third argument is the function we want to apply to each grouping of the
   data. We had to define our own short function here: each subset of the data
   gets stored in `x`, the first argument of our function. This is an anonymous
-  function: we haven't defined it elsewhere, and it has no name. It only exists
+  function: we have not defined it elsewhere, and it has no name. It only exists
   in the scope of our call to `ddply`.
 
 > ## Challenge 1

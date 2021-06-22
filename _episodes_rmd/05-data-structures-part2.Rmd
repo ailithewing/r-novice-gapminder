@@ -28,9 +28,9 @@ source("../bin/chunk-options.R")
 knitr_fig_path("05-")
 ```
 
-At this point, you've seen it all: in the last lesson, we toured all the basic
+At this point, you have seen it all: in the last lesson, we toured all the basic
 data types and data structures in R. Everything you do will be a manipulation of
-those tools. But most of the time, the star of the show is the data frame—the table that we created by loading information from a csv file. In this lesson, we'll learn a few more things
+those tools. But most of the time, the star of the show is the data frame—the table that we created by loading information from a csv file. In this lesson, we will learn a few more things
 about working with data frames.
 
 ## Adding columns and rows in data frames
@@ -301,7 +301,7 @@ is a *list of vectors and factors*:
 typeof(gapminder)
 ```
 
-When `length` gave us 6, it's because gapminder is built out of a list of 6
+When `length` gave us 6, it is because gapminder is built out of a list of 6
 columns. To get the number of rows and columns in our dataset, try:
 
 ```{r}
@@ -315,21 +315,21 @@ Or, both at once:
 dim(gapminder)
 ```
 
-We'll also likely want to know what the titles of all the columns are, so we can
+We will also likely want to know what the titles of all the columns are, so we can
 ask for them later:
 
 ```{r}
 colnames(gapminder)
 ```
 
-At this stage, it's important to ask ourselves if the structure R is reporting
+At this stage, it is important to ask ourselves if the structure R is reporting
 matches our intuition or expectations; do the basic data types reported for each
 column make sense? If not, we need to sort any problems out now before they turn
-into bad surprises down the road, using what we've learned about how R
+into bad surprises down the road, using what we have learned about how R
 interprets data, and the importance of *strict consistency* in how we record our
 data.
 
-Once we're happy that the data types and structures seem reasonable, it's time
+Once we are happy that the data types and structures seem reasonable, it is time
 to start digging into our data proper. Check out the first few lines:
 
 ```{r}
@@ -338,12 +338,12 @@ head(gapminder)
 
 > ## Challenge 3
 >
-> It's good practice to also check the last few lines of your data and some in the middle. How would you do this?
+> It is good practice to also check the last few lines of your data and some in the middle. How would you do this?
 >
-> Searching for ones specifically in the middle isn't too hard, but we could ask for a few lines at random. How would you code this?
+> Searching for ones specifically in the middle is not too hard, but we could ask for a few lines at random. How would you code this?
 >
 > > ## Solution to Challenge 3
-> > To check the last few lines it's relatively simple as R already has a function for this:
+> > To check the last few lines it is relatively simple as R already has a function for this:
 > >
 > > ~~~
 > > tail(gapminder)
@@ -354,7 +354,7 @@ head(gapminder)
 > > What about a few arbitrary rows just in case something is odd in the middle?
 > > ## Tip: There are several ways to achieve this.
 > > The solution here presents one form of using nested functions, i.e. a function passed as an argument to another function. This might sound like a new concept, but you are already using it!
-> > Remember my_dataframe[rows, cols] will print to screen your data frame with the number of rows and columns you asked for (although you might have asked for a range or named columns for example). How would you get the last row if you don't know how many rows your data frame has? R has a function for this. What about getting a (pseudorandom) sample? R also has a function for this.
+> > Remember my_dataframe[rows, cols] will print to screen your data frame with the number of rows and columns you asked for (although you might have asked for a range or named columns for example). How would you get the last row if you do not know how many rows your data frame has? R has a function for this. What about getting a (pseudorandom) sample? R also has a function for this.
 > > ~~~
 > > gapminder[sample(nrow(gapminder), 5), ]
 > > ~~~
@@ -400,10 +400,10 @@ into a script file so we can come back to it later.
 > ## Challenge 5
 >
 > Read the output of `str(gapminder)` again;
-> this time, use what you've learned about factors, lists and vectors,
+> this time, use what you have learned about factors, lists and vectors,
 > as well as the output of functions like `colnames` and `dim`
 > to explain what everything that `str` prints out for gapminder means.
-> If there are any parts you can't interpret, discuss with your neighbors!
+> If there are any parts you can not interpret, discuss with your neighbors!
 >
 > > ## Solution to Challenge 5
 > >

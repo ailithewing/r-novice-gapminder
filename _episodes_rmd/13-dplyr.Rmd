@@ -35,7 +35,7 @@ mean(gapminder[gapminder$continent == "Americas", "gdpPercap"])
 mean(gapminder[gapminder$continent == "Asia", "gdpPercap"])
 ```
 
-But this isn't very *nice* because there is a fair bit of repetition. Repeating
+But this is not very *nice* because there is a fair bit of repetition. Repeating
 yourself will cost you time, both now and later, and potentially introduce some
 nasty bugs.
 
@@ -47,7 +47,7 @@ in a way that will reduce the above repetition, reduce the probability of making
 errors, and probably even save you some typing. As an added bonus, you might
 even find the `dplyr` grammar easier to read.
 
-Here we're going to cover 5 of the most commonly used functions as well as using
+Here we are going to cover 5 of the most commonly used functions as well as using
 pipes (`%>%`) to combine them.
 
 1. `select()`
@@ -80,10 +80,10 @@ year_country_gdp <- select(gapminder, year, country, gdpPercap)
 
 ![Diagram illustrating use of select function to select two columns of a data frame](../fig/13-dplyr-fig1.png)
 
-If we open up `year_country_gdp` we'll see that it only contains the year,
+If we open up `year_country_gdp` we will see that it only contains the year,
 country and gdpPercap. Above we used 'normal' grammar, but the strengths of
 `dplyr` lie in combining several functions using pipes. Since the pipes grammar
-is unlike anything we've seen in R before, let's repeat what we've done above
+is unlike anything we have seen in R before, let's repeat what we have done above
 using pipes.
 
 ```{r}
@@ -93,7 +93,7 @@ year_country_gdp <- gapminder %>% select(year, country, gdpPercap)
 To help you understand why we wrote that in that way, let's walk through it step
 by step. First we summon the gapminder data frame and pass it on, using the pipe
 symbol `%>%`, to the next step, which is the `select()` function. In this case
-we don't specify which data object we use in the `select()` function since in
+we do not specify which data object we use in the `select()` function since in
 gets that from the previous pipe. **Fun Fact**: There is a good chance you have
 encountered pipes before in the shell. In R, a pipe symbol is `%>%` while in the
 shell it is `|` but the concept is the same!
@@ -148,7 +148,7 @@ continent since we would have removed it in the previous step.
 ## Using group_by()
 
 Now, we were supposed to be reducing the error prone repetitiveness of what can
-be done with base R, but up to now we haven't done that since we would have to
+be done with base R, but up to now we have not done that since we would have to
 repeat the above for each continent. Instead of `filter()`, which will only pass
 observations that meet your criteria (in the above: `continent=="Europe"`), we
 can use `group_by()`, which will essentially use every unique criteria that you
@@ -236,7 +236,7 @@ gdp_bycontinents_byyear <- gapminder %>%
     summarize(mean_gdpPercap = mean(gdpPercap))
 ```
 
-That is already quite powerful, but it gets even better! You're not limited to defining 1 new variable in `summarize()`.
+That is already quite powerful, but it gets even better! You are not limited to defining 1 new variable in `summarize()`.
 
 ```{r}
 gdp_pop_bycontinents_byyear <- gapminder %>%
@@ -358,7 +358,7 @@ ggplot(data = az.countries, aes(x = year, y = lifeExp, color = continent)) +
 This code makes the right plot but it also creates some variables (`starts.with`
 and `az.countries`) that we might not have any other uses for. Just as we used
 `%>%` to pipe data along a chain of `dplyr` functions we can use it to pass data
-to `ggplot()`. Because `%>%` replaces the first argument in a function we don't
+to `ggplot()`. Because `%>%` replaces the first argument in a function we do not
 need to specify the `data =` argument in the `ggplot()` function. By combining
 `dplyr` and `ggplot2` functions we can make the same figure without creating any
 new variables or modifying the data.

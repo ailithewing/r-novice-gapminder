@@ -43,7 +43,7 @@ x
 > In R, simple vectors containing character strings, numbers, or logical values are called *atomic* vectors because they can't be further simplified.
 {: .callout}
 
-So now that we've created a dummy vector to play with, how do we get at its
+So now that we have created a dummy vector to play with, how do we get at its
 contents?
 
 ## Accessing elements using their indices
@@ -124,7 +124,7 @@ x[c(-1, -5)]  # or x[-c(1,5)]
 > ## Tip: Order of operations
 >
 > A common trip up for novices occurs when trying to skip
-> slices of a vector. It's natural to try to negate a
+> slices of a vector. It is natural to try to negate a
 > sequence like so:
 >
 > ```{r, error=TRUE, eval=FALSE}
@@ -308,7 +308,7 @@ x[names(x) == "a"]
 
 ## Skipping named elements
 
-Skipping or removing named elements is a little harder. If we try to skip one named element by negating the string, R complains (slightly obscurely) that it doesn't know how to take the negative of a string:
+Skipping or removing named elements is a little harder. If we try to skip one named element by negating the string, R complains (slightly obscurely) that it does not know how to take the negative of a string:
 
 ```{r}
 x <- c(a=5.4, b=6.2, c=7.1, d=4.8, e=7.5) # we start again by naming a vector 'on the fly'
@@ -329,7 +329,7 @@ x[names(x)!=c("a","c")]
 
 R did *something*, but it gave us a warning that we ought to pay attention to - and it apparently *gave us the wrong answer* (the `"c"` element is still included in the vector)!
 
-So what does `!=` actually do in this case? That's an excellent question.
+So what does `!=` actually do in this case? That is an excellent question.
 
 ### Recycling
 
@@ -351,8 +351,8 @@ When one vector is shorter than the other, it gets *recycled*:
 ![Inequality testing: results of recycling](../fig/06-rmd-inequality.2.png)
 
 In this case R **repeats** `c("a", "c")` as many times as necessary to match `names(x)`, i.e. we get `c("a","c","a","c","a")`. Since the recycled `"a"`
-doesn't match the third element of `names(x)`, the value of `!=` is `TRUE`.
-Because in this case the longer vector length (5) isn't a multiple of the shorter vector length (2), R printed a warning message. If we had been unlucky and `names(x)` had contained six elements, R would *silently* have done the wrong thing (i.e., not what we intended it to do). This recycling rule can can introduce hard-to-find and subtle bugs!
+does not match the third element of `names(x)`, the value of `!=` is `TRUE`.
+Because in this case the longer vector length (5) is not a multiple of the shorter vector length (2), R printed a warning message. If we had been unlucky and `names(x)` had contained six elements, R would *silently* have done the wrong thing (i.e., not what we intended it to do). This recycling rule can can introduce hard-to-find and subtle bugs!
 
 The way to get R to do what we really want (match *each* element of the left argument with *all* of the elements of the right argument) it to use the `%in%` operator. The `%in%` operator goes through each element of its left argument, in this case the names of `x`, and asks, "Does this element occur in the second argument?". Here, since we want to *exclude* values, we also need a `!` operator to change "in" to "not in":
 
@@ -374,16 +374,16 @@ x[! names(x) %in% c("a","c") ]
 > seAsia <- c("Myanmar","Thailand","Cambodia","Vietnam","Laos")
 > ## read in the gapminder data that we downloaded in episode 2
 > gapminder <- read.csv("data/gapminder_data.csv", header=TRUE)
-> ## extract the `country` column from a data frame (we'll see this later);
+> ## extract the `country` column from a data frame (we will see this later);
 > ## convert from a factor to a character;
 > ## and get just the non-repeated elements
 > countries <- unique(as.character(gapminder$country))
 > ```
 >
-> There's a wrong way (using only `==`), which will give you a warning;
+> There is a wrong way (using only `==`), which will give you a warning;
 > a clunky way (using the logical operators `==` and `|`); and
 > an elegant way (using `%in%`). See whether you can come up with all three
-> and explain how they (don't) work.
+> and explain how they (do not) work.
 > 
 > > ## Solution to challenge 3
 > >
@@ -420,7 +420,7 @@ There are a number of special functions you can use to filter out this data:
 
 ## Factor subsetting
 
-Now that we've explored the different ways to subset vectors, how
+Now that we have explored the different ways to subset vectors, how
 do we subset the other data structures?
 
 Factor subsetting works the same way as vector subsetting.
@@ -495,7 +495,7 @@ m[5]
 ```
 
 
-This usually isn't useful, and often confusing to read. However it is useful to note that matrices
+This is not usually useful, and often confusing to read. However it is useful to note that matrices
 are laid out in *column-major format* by default. That is the elements of the
 vector are arranged column-wise:
 
@@ -540,8 +540,8 @@ instead of their row and column indices.
 
 ## List subsetting
 
-Now we'll introduce some new subsetting operators. There are three functions
-used to subset lists. We've already seen these when learning about atomic vectors and matrices:  `[`, `[[`, and `$`.
+Now we will introduce some new subsetting operators. There are three functions
+used to subset lists. We have already seen these when learning about atomic vectors and matrices:  `[`, `[[`, and `$`.
 
 Using `[` will always return a list. If you want to *subset* a list, but not
 *extract* an element, then you will likely use `[`.
@@ -554,8 +554,8 @@ xlist[1]
 This returns a *list with one element*.
 
 We can subset elements of a list exactly the same way as atomic
-vectors using `[`. Comparison operations however won't work as
-they're not recursive, they will try to condition on the data structures
+vectors using `[`. Comparison operations however will not work as
+they are not recursive, they will try to condition on the data structures
 in each element of the list, not the individual elements within those
 data structures.
 
@@ -572,7 +572,7 @@ xlist[[1]]
 
 Notice that now the result is a vector, not a list.
 
-You can't extract more than one element at once:
+You can not extract more than one element at once:
 
 ```{r, error=TRUE}
 xlist[[1:2]]

@@ -64,7 +64,7 @@ the fields in a database and observed variables are like the database values.
  
 ## Getting started
 
-First install the packages if you haven't already done so (you probably
+First install the packages if you have not already done so (you probably
 installed dplyr in the previous lesson):
 
 ```{r,eval=FALSE}
@@ -119,14 +119,14 @@ R actually work better in the wide format data.
 
 ## From wide to long format with pivot_longer()
 
-Until now, we've been using the nicely formatted original gapminder dataset, but
+Until now, we have been using the nicely formatted original gapminder dataset, but
 'real' data (i.e. our own research data) will never be so well organized. Here
 let's start with the wide formatted version of the gapminder dataset.
 
 > Download the wide version of the gapminder data from [here](https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_wide.csv)
 and save it in your data folder.
 
-We'll load the data file and look at it. Note: we don't want our continent and
+We will load the data file and look at it. Note: we do not want our continent and
 country columns to be factors, so we use the stringsAsFactors argument for
 `read.csv()` to disable that.
 
@@ -227,7 +227,7 @@ names(gap_normal)
 names(gapminder)
 ```
 
-Now we've got an intermediate data frame `gap_normal` with the same dimensions as
+Now we have got an intermediate data frame `gap_normal` with the same dimensions as
 the original `gapminder`, but the order of the variables is different. Let's fix
 that before checking if they are `all.equal()`.
 
@@ -238,7 +238,7 @@ head(gap_normal)
 head(gapminder)
 ```
 
-We're almost there, the original was sorted by `country`, then
+We are almost there, the original was sorted by `country`, then
 `year`.
 
 ```{r}
@@ -246,8 +246,8 @@ gap_normal <- gap_normal %>% arrange(country, year)
 all.equal(gap_normal, gapminder)
 ```
 
-That's great! We've gone from the longest format back to the intermediate and we
-didn't introduce any errors in our code.
+That is great! We have gone from the longest format back to the intermediate and we
+did not introduce any errors in our code.
 
 Now let's convert the long all the way back to the wide. In the wide format, we
 will keep country and continent as ID variables and pivot the observations
@@ -267,7 +267,7 @@ str(gap_temp)
 ```
 
 Using `unite()` we now have a single ID variable which is a combination of
-`continent`,`country`,and we have defined variable names. We're now ready to
+`continent`,`country`,and we have defined variable names. We are now ready to
 pipe in `pivot_wider()`
 
 ```{r}

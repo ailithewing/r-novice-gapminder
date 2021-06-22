@@ -41,7 +41,7 @@ and fixing obnoxious page breaks can be tedious and lead to a lengthly "whack-a-
 game of fixing new mistakes resulting from a single formatting change.
 
 Creating a web page (as an html file) using R Markdown makes things easier.
-The report can be one long stream, so tall figures that wouldn't ordinarily fit on
+The report can be one long stream, so tall figures that would not ordinarily fit on
 one page can be kept at full size and easier to read, since the reader can simply
 keep scrolling. Additionally, the formatting of and R Markdown document is simple and easy to modify, allowing you to spend
 more time on your analyses instead of writing reports.
@@ -70,7 +70,7 @@ pages.
 ## Creating an R Markdown file
 
 Within RStudio, click File &rarr; New File &rarr; R Markdown and
-you'll get a dialog box like this:
+you will get a dialog box like this:
 
 ![Screenshot of the New R Markdown file dialogue box in RStudio](../fig/New_R_Markdown.png)
 
@@ -80,7 +80,7 @@ You can stick with the default (HTML output), but give it a title.
 ## Basic components of R Markdown
 
 The initial chunk of text (header) contains instructions for R to specify what kind of document will be created, and the options chosen. You can use the header to give your document a title, author, date, and tell it what type of output you want
-to produce. In this case, we're creating an html document.
+to produce. In this case, we are creating an html document.
 
 ```
 ---
@@ -91,9 +91,9 @@ output: html_document
 ---
 ```
 
-You can delete any of those fields if you don't want them
-included. The double-quotes aren't strictly _necessary_ in this case.
-They're mostly needed if you want to include a colon in the title.
+You can delete any of those fields if you do not want them
+included. The double-quotes are not strictly _necessary_ in this case.
+They are mostly needed if you want to include a colon in the title.
 
 RStudio creates the document with some example text to get you
 started. Note below that there are chunks like
@@ -114,7 +114,7 @@ as you would in an email rather than writing html code. The marked-up
 text gets _converted_ to html, replacing the marks with the proper
 html code.
 
-For now, let's delete all of the stuff that's there and write a bit of
+For now, let's delete all of the stuff that is there and write a bit of
 markdown.
 
 You make things **bold** using two asterisks, like this: `**bold**`,
@@ -356,7 +356,7 @@ library("ggplot2")
 &#96;&#96;&#96;
 </pre>
 
-Often there will be particular options that you'll want to use
+Often there will be particular options that you will want to use
 repeatedly; for this, you can set _global_ chunk options, like so:
 
 <pre>
@@ -403,7 +403,7 @@ You can make _every_ number in your report reproducible. Use
 like so: <code>&#96;r round(some_value, 2)&#96;</code>. The code will be
 executed and replaced with the _value_ of the result.
 
-Don't let these in-line chunks get split across lines.
+Do not let these in-line chunks get split across lines.
 
 Perhaps precede the paragraph with a larger code chunk that does
 calculations and defines variables, with `include=FALSE` for that larger
@@ -423,7 +423,7 @@ this.
 > 
 > > ## Solution to Challenge 4
 > > 
-> > Here's some inline code to determine that 2 + 2 = `` `r
+> > Here is some inline code to determine that 2 + 2 = `` `r
 > > 2+2` ``.
 > > 
 > {: .solution}
@@ -442,7 +442,7 @@ of the file.
 > Creating .pdf documents may require installation of some extra software. The R 
 > package `tinytex` provides some tools to help make this process easier for R users.
 > With `tinytex` installed, run `tinytex::install_tinytex()` to install the required
-> software (you'll only need to do this once) and then when you knit to pdf `tinytex`
+> software (you will only need to do this once) and then when you knit to pdf `tinytex`
 > will automatically detect and install any additional LaTeX packages that are needed to 
 > produce the pdf document. Visit the [tinytex website](https://yihui.org/tinytex/) 
 > for more information.

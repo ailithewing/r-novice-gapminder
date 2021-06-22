@@ -19,11 +19,11 @@ source("../bin/chunk-options.R")
 knitr_fig_path("07-")
 # Silently load in the data so the rest of the lesson works
 gapminder <- read.csv("data/gapminder_data.csv", header = TRUE)
-# Silently set seed for random number generation, so we don't have to explain it
+# Silently set seed for random number generation, so we do not have to explain it
 set.seed(10)
 ```
 
-Often when we're coding we want to control the flow of our actions. This can be done
+Often when we are coding we want to control the flow of our actions. This can be done
 by setting actions to occur only if a condition or a set of conditions are met.
 Alternatively, we can also set an action to occur a particular number of times.
 
@@ -254,13 +254,13 @@ This approach can be useful, but 'growing your results' (building
 the result object incrementally) is computationally inefficient, so avoid
 it when you are iterating through a lot of values.
 
-> ## Tip: don't grow your results
+> ## Tip: do not grow your results
 >
 > One of the biggest things that trips up novices and
 > experienced R users alike, is building a results object
 > (vector, list, matrix, data frame) as your for loop progresses.
 > Computers are very bad at handling this, so your calculations
-> can very quickly slow to a crawl. It's much better to define
+> can very quickly slow to a crawl. It is much better to define
 > an empty results object before hand of appropriate dimensions, rather 
 > than initializing an empty object without dimensions.
 > So if you know the end result will be stored in a matrix like above,
@@ -298,9 +298,9 @@ output_vector2
 > ```
 > R will interpret a condition being met as "TRUE".
 >
-> As an example, here's a while loop
+> As an example, here is a while loop
 > that generates random numbers from a uniform distribution (the `runif()` function)
-> between 0 and 1 until it gets one that's less than 0.1.
+> between 0 and 1 until it gets one that is less than 0.1.
 >
 > ~~~
 > z <- 1
@@ -312,7 +312,7 @@ output_vector2
 > {: .r}
 >
 >`while()` loops will not always be appropriate. You have to be particularly careful
-> that you don't end up stuck in an infinite loop because your condition is always met and hence the while statement never terminates.
+> that you do not end up stuck in an infinite loop because your condition is always met and hence the while statement never terminates.
 {: .callout}
 
 

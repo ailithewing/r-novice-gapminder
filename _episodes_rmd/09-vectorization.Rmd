@@ -228,7 +228,7 @@ m * -1
 
 > ## Challenge 4
 >
-> We're interested in looking at the sum of the
+> We are interested in looking at the sum of the
 > following sequence of fractions:
 >
 > ```{r, eval=FALSE}
@@ -241,7 +241,7 @@ m * -1
 >
 > > ##  Challenge 4
 > >
-> > We're interested in looking at the sum of the
+> > We are interested in looking at the sum of the
 > > following sequence of fractions:
 > >
 > > ```{r, eval=FALSE}

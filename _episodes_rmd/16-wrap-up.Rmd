@@ -11,7 +11,7 @@ keypoints:
 - "Document what and why, not how."
 - "Break programs into short single-purpose functions."
 - "Write re-runnable tests."
-- "Don't repeat yourself."
+- "Do not repeat yourself."
 - "Be consistent in naming, indentation, and other aspects of style."
 source: Rmd
 ---
@@ -53,12 +53,12 @@ who will otherwise be cursing past-self.
 ## Documentation: tell us what and why, not how
 
 When you first start out, your comments will often describe what a command does,
-since you're still learning yourself and it can help to clarify concepts and
-remind you later. However, these comments aren't particularly useful later on
-when you don't remember what problem your code is trying to solve. Try to also
-include comments that tell you *why* you're solving a problem, and *what* problem
-that is. The *how* can come after that: it's an implementation detail you ideally
-shouldn't have to worry about.
+since you are still learning yourself and it can help to clarify concepts and
+remind you later. However, these comments are not particularly useful later on
+when you do not remember what problem your code is trying to solve. Try to also
+include comments that tell you *why* you are solving a problem, and *what* problem
+that is. The *how* can come after that: it is an implementation detail you ideally
+should not have to worry about.
 
 ## Keep your code modular
 
@@ -81,7 +81,7 @@ reach a point where you can code a solution, and build back up from there.
 
 Make sure to test your functions!
 
-## Don't repeat yourself
+## Do not repeat yourself
 
 Functions enable easy reuse within a project. If you see blocks of similar
 lines of code through your project, those are usually candidates for being

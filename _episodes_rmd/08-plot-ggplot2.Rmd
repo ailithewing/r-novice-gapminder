@@ -35,7 +35,7 @@ package, and the [ggplot2][ggplot2] package.
 [lattice]: http://www.statmethods.net/advgraphs/trellis.html
 [ggplot2]: http://www.statmethods.net/advgraphs/ggplot2.html
 
-Today we'll be learning about the ggplot2 package, because
+Today we will be learning about the ggplot2 package, because
 it is the most effective for creating publication quality
 graphics.
 
@@ -57,21 +57,21 @@ ggplot(data = gapminder, mapping = aes(x = gdpPercap, y = lifeExp)) +
 ```
 
 So the first thing we do is call the `ggplot` function. This function lets R
-know that we're creating a new plot, and any of the arguments we give the
+know that we are creating a new plot, and any of the arguments we give the
 `ggplot` function are the *global* options for the plot: they apply to all
 layers on the plot.
 
-We've passed in two arguments to `ggplot`. First, we tell `ggplot` what data we
+We have passed in two arguments to `ggplot`. First, we tell `ggplot` what data we
 want to show on our figure, in this example the gapminder data we read in
 earlier. For the second argument,  we passed in the `aes` function, which
 tells `ggplot` how variables in the **data** map to *aesthetic* properties of
 the figure, in this case the **x** and **y** locations. Here we told `ggplot` we
 want to plot the "gdpPercap" column of the gapminder data frame on the x-axis, and
-the "lifeExp" column on the y-axis. Notice that we didn't need to explicitly
+the "lifeExp" column on the y-axis. Notice that we did not need to explicitly
 pass `aes` these columns (e.g. `x = gapminder[, "gdpPercap"]`), this is because
 `ggplot` is smart enough to know to look in the **data** for that column!
 
-By itself, the call to `ggplot` isn't enough to draw a figure:
+By itself, the call to `ggplot` is not enough to draw a figure:
 
 ```{r}
 ggplot(data = gapminder, mapping = aes(x = gdpPercap, y = lifeExp))
@@ -113,7 +113,7 @@ ggplot(data = gapminder, mapping = aes(x = gdpPercap, y = lifeExp)) +
 >
 > ## Challenge 2
 >
-> In the previous examples and challenge we've used the `aes` function to tell
+> In the previous examples and challenge we have used the `aes` function to tell
 > the scatterplot **geom** about the **x** and **y** locations of each point.
 > Another *aesthetic* property we can modify is the point *color*. Modify the
 > code from the previous challenge to **color** the points by the "continent"
@@ -137,7 +137,7 @@ ggplot(data = gapminder, mapping = aes(x = gdpPercap, y = lifeExp)) +
 
 ## Layers
 
-Using a scatterplot probably isn't the best for visualizing change over time.
+Using a scatterplot probably is not the best for visualizing change over time.
 Instead, let's tell `ggplot` to visualize the data as a line plot:
 
 ```{r lifeExp-line}
@@ -145,7 +145,7 @@ ggplot(data = gapminder, mapping = aes(x=year, y=lifeExp, by=country, color=cont
   geom_line()
 ```
 
-Instead of adding a `geom_point` layer, we've added a `geom_line` layer. We've
+Instead of adding a `geom_point` layer, we have added a `geom_line` layer. We have
 added the **by** *aesthetic*, which tells `ggplot` to draw a line for each
 country.
 
@@ -157,8 +157,8 @@ ggplot(data = gapminder, mapping = aes(x=year, y=lifeExp, by=country, color=cont
   geom_line() + geom_point()
 ```
 
-It's important to note that each layer is drawn on top of the previous layer. In
-this example, the points have been drawn *on top of* the lines. Here's a
+It is important to note that each layer is drawn on top of the previous layer. In
+this example, the points have been drawn *on top of* the lines. Here is a
 demonstration:
 
 ```{r lifeExp-layer-example-1}
@@ -173,7 +173,7 @@ lines.
 
 > ## Tip: Setting an aesthetic to a value instead of a mapping
 >
-> So far, we've seen how to use an aesthetic (such as **color**) as a *mapping* to a variable in the data. For example, when we use `geom_line(mapping = aes(color=continent))`, ggplot will give a different color to each continent. But what if we want to change the colour of all lines to blue? You may think that `geom_line(mapping = aes(color="blue"))` should work, but it doesn't. Since we don't want to create a mapping to a specific variable, we can move the color specification outside of the `aes()` function, like this: `geom_line(color="blue")`.
+> So far, we have seen how to use an aesthetic (such as **color**) as a *mapping* to a variable in the data. For example, when we use `geom_line(mapping = aes(color=continent))`, ggplot will give a different color to each continent. But what if we want to change the colour of all lines to blue? You may think that `geom_line(mapping = aes(color="blue"))` should work, but it does not. Since we do not want to create a mapping to a specific variable, we can move the color specification outside of the `aes()` function, like this: `geom_line(color="blue")`.
 {: .callout}
 
 > ## Challenge 3
@@ -197,14 +197,14 @@ lines.
 ## Transformations and statistics
 
 ggplot2 also makes it easy to overlay statistical models over the data. To
-demonstrate we'll go back to our first example:
+demonstrate we will go back to our first example:
 
 ```{r lifeExp-vs-gdpPercap-scatter3, message=FALSE}
 ggplot(data = gapminder, mapping = aes(x = gdpPercap, y = lifeExp)) +
   geom_point()
 ```
 
-Currently it's hard to see the relationship between the points due to some strong
+Currently it is hard to see the relationship between the points due to some strong
 outliers in GDP per capita. We can change the scale of units on the x axis using
 the *scale* functions. These control the mapping between the data values and
 visual values of an aesthetic. We can also modify the transparency of the
@@ -241,7 +241,7 @@ ggplot(data = gapminder, mapping = aes(x = gdpPercap, y = lifeExp)) +
 
 There are two ways an *aesthetic* can be specified. Here we *set* the **size**
 aesthetic by passing it as an argument to `geom_smooth`. Previously in the
-lesson we've used the `aes` function to define a *mapping* between data
+lesson we have used the `aes` function to define a *mapping* between data
 variables and their visual representation.
 
 > ## Challenge 4a
